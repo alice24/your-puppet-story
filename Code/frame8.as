@@ -1,18 +1,21 @@
 ﻿//THIS CODE IS INTENDED TO BE COPIED ONTO FRAME 8 OF THE FLA FILE
 stop();
 
-trace("I'm the ending!")
+//start playing the menu music again
 myChannel = menuSound.play();
 myTransform.volume = 0.1;
 myChannel.soundTransform = myTransform;
 soundPlaying = true;
 
 clapping.play();
+
+//hide everything in order to fade it in, like before
 endBox.alpha = 0;
 restartBox.alpha = 0;
 okBtn.alpha = 0;
 endBox.text = "THE END!";
 
+//delay once again to show the button animation on the restart (GO) button
 counter = 0;
 
 function end(evnt:Event):void{
@@ -27,6 +30,7 @@ function end(evnt:Event):void{
 	}
 }
 
+//brief pause to show button animation 
 function pause(evnt:Event):void{
 	counter++;
 	if (counter > 10){
@@ -34,19 +38,17 @@ function pause(evnt:Event):void{
 		stage.removeEventListener(Event.ENTER_FRAME,pause);
 	}
 }
-	
-function restart(event:KeyboardEvent):void { 
+
+function restart(event:KeyboardEvent):void {
 	switch(event.keyCode){
 		case 76:
 			clickSound.play();
 			okBtn.gotoAndPlay(2);
 			stage.removeEventListener(KeyboardEvent.KEY_DOWN, restart);
-			removeChild(p1);
-			removeChild(p2);
+
+			//resets the number of scenes
 			numScenes = 0;
 			stage.addEventListener(Event.ENTER_FRAME,pause);
-			break;
-		default:
 			break;
 	}
 }
