@@ -12,13 +12,10 @@ HOW TO CREATE YOUR OWN
 Check tutorial.pdf!
 
 -----------------------
-CODE & CONTROLLER
+CODE
 -----------------------
-General guidelines are provided as well as the code (available for reference).
-The project requires a general understanding of Flash CC and how to place objects
-on the stage.
+The code is the original from my own project, commented. It is meant to explain
+what each line is for and for you to use as reference to construct your own project.
 
-General guidelines are also provided for the controller. The user must tweak it
-depending on how their program is made.
-
-Most of this information is inside of tutorial.pdf.
+Refer to the pdf Frame Guide to see how each frame should look
+(some frames are omitted that are just the stage with no key content).
